@@ -34,7 +34,7 @@ namespace SzkolenieCsharpSelenium
             driver.Navigate().GoToUrl("https://www.youtube.pl");
             driver.FindElement(By.Id("search")).SendKeys("look4app");
             driver.FindElement(By.Id("search-icon-legacy")).Click();
-            String channelDescription = driver.FindElement(By.Id("description")).Text;
+            var channelDescription = driver.FindElement(By.Id("description")).Text;
             StringAssert.Contains(channelDescription, "We do cutting-edge blockchain and web projects. We're in Top 5 Blockchain Companies according to Clutch.io.");
             driver.Quit();
 
